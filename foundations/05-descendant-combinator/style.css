@@ -1,0 +1,18 @@
+
+.container .text {
+    background-color: yellow;
+    color: red;
+    text-align: center;
+    font-size:20px;
+}
+
+/* alternatively */
+
+/*
+.container p {
+    background-color: yellow;
+    color: red;
+    text-align: center;
+    font-size: 20px;
+}
+*/
