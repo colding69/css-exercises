@@ -3,13 +3,26 @@
   color: hsl(0, 100%, 50%);
 }
 
-.small-para {
-  font-size: 12px;
-}
+/* 
+I have switched the source order around.
+Both para class and small para class have same specificity by themselves.
+
+By placing small para after para, I ensure the 12px font size has higher specificty
+due to later source order.
+
+As .small-para is directly targetting and specifying small para class's values, its 22px
+font size inherited by the prior declaration will be overwritten.
+*/
 
 .para {
   font-size: 22px;
 }
+
+.small-para {
+  font-size: 12px;
+}
+
+
 
 .confirm {
   background: green;
@@ -18,13 +31,30 @@
   font-weight: bold;
 } 
 
-.button {
+/* 
+I have used the chaining rule so that the pink background is specifically applied
+to element of both cancel AND button class.
+
+Meaning that the values of the confirm class button, e.g. its green background colour
+is left unaffected.
+
+This differs from solution in that confirm button was the one to be chained instead as .confirm.button.
+*/
+
+.cancel.button {
   background-color: #ffc0cb;
   color: black;
   font-size: 20px;
 }
 
-.child {
+/* 
+A descendant combinator was used here similar to the one in solution.css.
+By having the descendant combinator being from parent to child class instead of
+parent type and child class, the declaration gains a higher specificity so wouldn't
+be overwritten by a rule with later source order.
+*/
+
+.text .child {
   color: red;
   font-size: 14px;
 }
