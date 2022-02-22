@@ -7,15 +7,18 @@ body {
   background: pink;
   border: 3px solid blue;
   /* CHANGE ME */
-  padding: 0px;
-  margin: 0px;
+  /* The padding controls space between text and border. */
+  padding: 32px;
+  /* The margin controls space between div one and other elements on page.*/
+  margin: 12px;
 }
 
 .two {
   background: lightblue;
   border: 3px solid purple;
   /* CHANGE ME */
-  margin-bottom: 0px;
+  /* The margin bottom controls gap size between div two and div three*/
+  margin-bottom: 48px;
 }
 
 .three {
@@ -23,6 +26,11 @@ body {
   border: 3px solid brown;
   width: 200px;
   /* CHANGE ME */
-  padding: 0px;
-  margin-left: 0px;
+  padding: 48px;
+  margin-left: 300px;
+  /* 
+  Should have set margin-left to auto,
+  Default value of auto is the max value of left margin in the div container.
+  The max left margin would have pushed the element to the side.
+  */
 }
