@@ -1,0 +1,6 @@
+I have mistakenly confused the "8px between edge of the card and its content (the blue section)" as border when it is referring to padding.
+
+The next mistake is applying margin bottom to the butt-container element which added extra margin of 8px to the last block when there shouldn't have been any.
+
+I should have also added margin-top 0 for the title block aka the first block to get rid of the big white extra margin on the top.
+

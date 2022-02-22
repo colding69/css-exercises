@@ -8,12 +8,23 @@ body {
   background: #fff;
   margin: 16px auto;
   /* The white space between edge of the card and its blue sections is the border. */
+  /* THIS IS WRONG!  The space between edge of the content and its blue borders is the PADDING!*/
   border: solid 8px white;
 }
 
 /* 
 Group each of the blue sections inside the cards together,
 apply a rule for 8px margin-bottom for all of them.
+
+THIS IS WRONG! YOU SHOULDN'T HAVE ADDED .button-container TO THE GROUP
+THIS IS WHY THERE WAS EXTRA BIG WHITE MARGIN AT THE BOTTOM,
+
+THE GROUPING SHOULD BE
+.card,
+.title,
+.content
+
+'
 */
 .title,
 .content,
