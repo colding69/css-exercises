@@ -12,6 +12,13 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  /* change header to flex display and spread out left and right blocks. */
+  display: flex;
+  justify-content: space-between;
+  /* center everything vertically inside header*/
+  align-items: center;
+  /* put 8px space between everything and edge of header */
+  padding: 8px;
 }
 
 .profile-image {
@@ -27,6 +34,33 @@ body {
   font-size: 32px;
   font-weight: 900;
   font-style: italic;
+}
+
+/* 
+Make left block into a flex container.
+Ensure there is 16px between each item.
+*/
+.left {
+  display: flex;
+  gap: 16px;
+}
+
+/*
+Set the display into flex for the unordered list on the left.
+Ensure there is 16px between each item.
+*/
+.left ul {
+  display: flex;
+  gap: 16px;
+}
+
+/* 
+Make right block into a flex container.
+Ensure there is 16px between each item.
+*/
+.right {
+  display: flex;
+  gap: 16px;
 }
 
 button {
