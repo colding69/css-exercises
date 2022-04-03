@@ -1,5 +1,11 @@
 body {
   font-family: 'Courier New', Courier, monospace;
+  /* The whole body needs to be flex to manipulate title and items. */
+  display: flex;
+  /* Change orientation to column to break items on a new line below title. */
+  flex-direction: column;
+  /* Center all items on page (horizontally). */
+  align-items: center;
 }
 
 img {
@@ -10,6 +16,26 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+  /* Create 32px between title and the items/flex item containing the 4 species. */
+  padding-bottom: 32px;
+}
+
+.plants {
+  /* Arrange items horizontally on page.*/
+  display: flex;
+  flex-direction: row;
+  /* Ensure there is 52px between each item.*/
+  gap: 52px;
+  justify-content: center;
+}
+
+.plants div {
+  /* Change the width to 200px wide. */
+  width: 200px;
+  /* Ensure text wraps. */
+  flex-wrap: nowrap;
+  /* Center the item text */
+  text-align: center;
 }
 
 /* do not edit this footer */
