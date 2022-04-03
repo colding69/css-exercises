@@ -4,8 +4,8 @@ body {
   display: flex;
   /* Change orientation to column to break items on a new line below title. */
   flex-direction: column;
-  /* Center all items on page (horizontally). */
-  align-items: center;
+  /* Using text align here hits 2 birds with 1 stone; both title and picture texts are centered. */
+  text-align: center;
 }
 
 img {
@@ -17,21 +17,28 @@ img {
   font-size: 36px;
   font-weight: 900;
   /* Create 32px between title and the items/flex item containing the 4 species. */
-  padding-bottom: 32px;
+  /* Use marging instead of padding as that's how you get space between blocks. */
+  margin-bottom: 32px;
 }
 
 .plants {
-  /* Arrange items horizontally on page.*/
   display: flex;
+  /* 
+  Line up plant items horizontally on page.
+  */
   flex-direction: row;
   /* Ensure there is 52px between each item.*/
   gap: 52px;
+  /* Center the texts and images! */
   justify-content: center;
 }
 
 .plants div {
-  /* Change the width to 200px wide. */
-  width: 200px;
+  /* 
+  THE KEY IS TO USE MAX-WITH, NOT WIDTH! 
+  max-width will cause the flex items to shrink with screen responsively.
+  */
+  max-width: 200px;
   /* Ensure text wraps. */
   flex-wrap: nowrap;
   /* Center the item text */
